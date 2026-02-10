@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- 定义 Fishbot 机器人基座的 XACRO 文件。 -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:macro name="base_xacro" params="length radius">
         <link name="base_footprint" />

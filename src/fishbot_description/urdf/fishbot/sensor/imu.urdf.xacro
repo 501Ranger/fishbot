@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- 定义 Fishbot 机器人 IMU 传感器的 XACRO 文件。 -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:macro name="imu_xacro" params="xyz">
         <link name="imu_link">
