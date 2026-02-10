@@ -18,7 +18,7 @@ def generate_launch_description():
     )
 
     substitutions_commend_result = launch.substitutions.Command(
-        ["cat ", launch.substitutions.LaunchConfiguration("model")]
+        ["xacro ", launch.substitutions.LaunchConfiguration("model")]
     )
     robot_description_value = launch_ros.parameter_descriptions.ParameterValue(
         substitutions_commend_result, value_type=str
