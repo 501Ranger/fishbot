@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <!-- 定义 Fishbot 机器人摄像头传感器的 XACRO 文件。 -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find fishbot_description)/urdf/fishbot/commonn_inertia.xacro" />
+
     <xacro:macro name="camera_xacro" params="xyz">
         <link name="camera_link">
             <visual>
@@ -21,6 +23,8 @@
                     <color rgba="0.0 0.0 0.0 0.8" />
                 </material>
             </collision>
+
+            <xacro:box_inertia m="0.10" w="0.02" h="0.10" d="0.02" />
         </link>
 
         <joint name="camera_joint" type="fixed">

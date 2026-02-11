@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <!-- 定义 Fishbot 机器人 IMU 传感器的 XACRO 文件。 -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find fishbot_description)/urdf/fishbot/commonn_inertia.xacro" />
+
     <xacro:macro name="imu_xacro" params="xyz">
         <link name="imu_link">
             <visual>
@@ -22,6 +24,8 @@
                     <color rgba="0.0 0.0 0.0 0.8" />
                 </material>
             </collision>
+            
+            <xacro:box_inertia m="0.05" w="0.02" h="0.02" d="0.02" />
         </link>
 
         <joint name="imu_joint" type="fixed">

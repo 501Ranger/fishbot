@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <!-- 定义 Fishbot 机器人万向轮执行器的 XACRO 文件。 -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find fishbot_description)/urdf/fishbot/commonn_inertia.xacro" />
+
     <xacro:macro name="caster_xacro" params="caster_name xyz">
         <link name="${caster_name}_link">
             <visual>
@@ -22,6 +24,8 @@
                     <color rgba="1.0 1.0 0.0 0.8" />
                 </material>
             </collision>
+
+            <xacro:sphere_inertia m="1.0" r="0.016" />
         </link>
 
         <joint name="${caster_name}_joint" type="fixed">
