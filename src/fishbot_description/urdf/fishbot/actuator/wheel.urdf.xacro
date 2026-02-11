@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- 定义 Fishbot 机器人车轮执行器的 XACRO 文件。 -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:include filename="$(find fishbot_description)/urdf/fishbot/commonn_inertia.xacro" />
+    <xacro:include filename="$(find fishbot_description)/urdf/fishbot/common_inertia.xacro" />
 
     <xacro:macro name="wheel_xacro" params="wheel_name xyz">
         <link name="${wheel_name}_link">
